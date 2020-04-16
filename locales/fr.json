@@ -1,0 +1,13 @@
+{
+  "patterns": {
+    "decreasing": "Décroissant",
+    "fluctuating": "Variable",
+    "unknown": "Inconnu",
+    "large-spike": "Grand Pic",
+    "small-spike": "Petit Pic"
+  },
+  "times": {
+    "morning": "Matin",
+    "afternoon": "Après-midi"
+  }
+}
