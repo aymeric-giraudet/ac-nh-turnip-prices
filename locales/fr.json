@@ -28,8 +28,8 @@
   "prices": {
     "description": "À quel prix Porcelette vendait ses navets sur ton île cette semaine ?<i>(Si c'est la première fois que t'en achètes, ce champ sera desactivé)</i>",
     "open": {
-      "am": "Matin (AM) - de 8:00 à 11:59",
-      "pm": "Apres-midi (PM) - de 12:00 à 22:00"
+      "am": "AM - de 8:00 à 11:59",
+      "pm": "PM - de 12:00 à 22:00"
     },
     "copy-permalink": "Copier le permalien",
     "permalink-copied": "Permalien copié !",
@@ -72,7 +72,7 @@
   "textbox": {
     "description": "Après avoir renseigné quelques prix, le Prophète des Navets fera des calculs et affichera les différents modèles possibles que ton île pourrait avoir.",
     "development": "Cette appli est en développement, mais elle s'améliore jour après jour !",
-    "thanks": "Rien de tout ça n'aurait pu être possible sans <a href=\"https://twitter.com/_Ninji/status/1244818665851289602?s=20\">le travail de Ninji</a> et son analyse sur comment Méli et Mélo détermient la valeur des Navets.",
+    "thanks": "Rien de tout ça n'aurait pu être possible sans <a href=\"https://twitter.com/_Ninji/status/1244818665851289602?s=20\">le travail de Ninji</a> et son analyse sur comment Méli et Mélo déterminent la valeur des Navets.",
     "support": "Aide, commentaires et contributions sont disponibles via <a href=\"https://github.com/mikebryant/ac-nh-turnip-prices/issues\">Github</a>",
     "contributors-text": "Oh ! Et n'oublions pas de remercier toutes les personnes ayant contribué jusqu'à maintenant !",
     "contributors": "Contributeurs"
