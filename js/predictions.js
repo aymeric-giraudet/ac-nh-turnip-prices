@@ -204,8 +204,8 @@ class PDF {
     }
 
     let prob = 0;
-    const start_idx = Math.round(start) - this.value_start; 
-    const end_idx = Math.round(end) - this.value_start; 
+    const start_idx = Math.round(start) - this.value_start;
+    const end_idx = Math.round(end) - this.value_start;
     for (let i = start_idx; i <= end_idx; i++) {
       const bucket_prob = this.prob[i] * range_intersect_length(this.range_of(i), range);
       this.prob[i] = bucket_prob;
@@ -560,7 +560,7 @@ function*
   }
 
   yield {
-    pattern_description: "Fluctuating",
+    pattern_description: i18next.t("patterns.fluctuating"),
     pattern_number: 0,
     prices: predicted_prices,
     probability,
@@ -639,7 +639,7 @@ function* generate_pattern_1_with_peak(given_prices, peak_start) {
     }
   }
   yield {
-    pattern_description: "Large spike",
+    pattern_description: i18next.t("patterns.large-spike"),
     pattern_number: 1,
     prices: predicted_prices,
     probability,
@@ -686,7 +686,7 @@ function* generate_pattern_2(given_prices) {
   }
 
   yield {
-    pattern_description: "Decreasing",
+    pattern_description: i18next.t("patterns.decreasing"),
     pattern_number: 2,
     prices: predicted_prices,
     probability,
@@ -767,7 +767,7 @@ function* generate_pattern_3_with_peak(given_prices, peak_start) {
   }
 
   yield {
-    pattern_description: "Small spike",
+    pattern_description: i18next.t("patterns.small-spike"),
     pattern_number: 3,
     prices: predicted_prices,
     probability,
@@ -838,6 +838,10 @@ function analyze_possibilities(sell_prices, first_buy, previous_pattern) {
         weekMaxes = [];
       }
     }
+    if (!weekMins.length && !weekMaxes.length) {
+      weekMins.push(poss.prices[poss.prices.length -1].min);
+      weekMaxes.push(poss.prices[poss.prices.length -1].max);
+    }
     poss.weekGuaranteedMinimum = Math.max(...weekMins);
     poss.weekMax = Math.max(...weekMaxes);
   }
@@ -870,7 +874,7 @@ function analyze_possibilities(sell_prices, first_buy, previous_pattern) {
   }
 
   generated_possibilities.unshift({
-    pattern_description: "All patterns",
+    pattern_description: i18next.t("patterns.all"),
     pattern_number: 4,
     prices: global_min_max,
     weekGuaranteedMinimum: Math.min(...generated_possibilities.map(poss => poss.weekGuaranteedMinimum)),
